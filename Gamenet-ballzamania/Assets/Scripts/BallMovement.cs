@@ -12,7 +12,6 @@ public class BallMovement : MonoBehaviour {
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.right * ImpactForce, ForceMode.Impulse);
     }
 
     private void FixedUpdate()
