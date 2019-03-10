@@ -17,7 +17,7 @@ public class BallMovement : MonoBehaviour {
     private void FixedUpdate()
     {
         Vector3 speed = rb.velocity;
-        Debug.Log(speed);
+
 
         if (MinSpeed > speed.magnitude)
         {
