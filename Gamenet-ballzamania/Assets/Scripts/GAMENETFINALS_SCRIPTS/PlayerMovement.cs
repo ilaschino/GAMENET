@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class PlayerMovement : NetworkBehaviour {
 
     [SerializeField]
-    private float speed = 6.0f;
+    public float speed = 6.0f;
 
     private Vector3 moveDirection = Vector3.zero;
  

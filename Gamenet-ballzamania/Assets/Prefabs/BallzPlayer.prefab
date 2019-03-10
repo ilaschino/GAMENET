@@ -25,10 +25,11 @@ GameObject:
   - component: {fileID: 114189807288517826}
   - component: {fileID: 114981465600487546}
   - component: {fileID: 114910203571307520}
+  - component: {fileID: 114545129474514686}
   - component: {fileID: 54020702295516150}
   m_Layer: 0
   m_Name: BallzPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +128,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+--- !u!114 &114545129474514686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382083769480690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde89b5a6e8f764489c5f48abe1aed76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPowerups: []
 --- !u!114 &114910203571307520
 MonoBehaviour:
   m_ObjectHideFlags: 1
