@@ -18,7 +18,6 @@ public class BallMovement : MonoBehaviour {
     {
         Vector3 speed = rb.velocity;
 
-
         if (MinSpeed > speed.magnitude)
         {
             speed = rb.velocity.normalized * MinSpeed;
@@ -31,7 +30,6 @@ public class BallMovement : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            print("Collide" + collision.gameObject.name);
             Vector3 dir = collision.contacts[0].point - transform.position;
             dir = -dir.normalized;
 
