@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimedTitanGel : TimedPowerup
 {
-
+    [SerializeField] private string tagCollide = "Wall";
     public TitanGel titanGelPowerup;
 
     private GameObject receiver;
@@ -30,7 +30,7 @@ public class TimedTitanGel : TimedPowerup
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == tagCollide)
         {
             other.gameObject.GetComponent<PowerupReceiver>().AddPowerup(titanGelPowerup.InitializePowerup(other.gameObject));
             Destroy(gameObject);

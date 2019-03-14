@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4429937102852350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,9 +37,9 @@ GameObject:
   - component: {fileID: 33091973804315762}
   - component: {fileID: 23428727717771008}
   - component: {fileID: 136793234739462266}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Post
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 33411127792501090}
   - component: {fileID: 23406079897770800}
   - component: {fileID: 136831966371855932}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,28 +81,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1570834125617046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.792, y: 0.395, z: 0}
+  m_LocalRotation: {x: -0, y: -0.67904437, z: -0, w: 0.7340973}
+  m_LocalPosition: {x: -0.847, y: 0.38, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4776164579529942}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -85.538, z: 0}
 --- !u!4 &4776164579529942
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635687156704960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.57, y: 16.72, z: 9.48}
-  m_LocalScale: {x: 2.4376075, y: 1.4711856, z: 2.5219064}
+  m_LocalRotation: {x: -0, y: -0.92387956, z: -0, w: 0.38268343}
+  m_LocalPosition: {x: -12.122223, y: 4.634759, z: 9.158588}
+  m_LocalScale: {x: 2.4376087, y: 1.4711856, z: 2.5219073}
   m_Children:
   - {fileID: 4361862702008678}
   - {fileID: 4429937102852350}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
 --- !u!23 &23406079897770800
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -196,8 +196,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.1
+  m_Height: 3.65
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!136 &136831966371855932

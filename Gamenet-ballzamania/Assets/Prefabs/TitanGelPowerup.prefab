@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708bfa8dec701ee4c819c4c3c5d0d66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagCollide: Wall
   titanGelPowerup: {fileID: 11400000, guid: 3884cb1c587f6bd4dbc86fecfc18ff55, type: 2}
 --- !u!135 &135193572251556420
 SphereCollider:

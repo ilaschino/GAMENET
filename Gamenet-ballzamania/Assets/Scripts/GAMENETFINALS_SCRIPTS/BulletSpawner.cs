@@ -12,6 +12,8 @@ public class BulletSpawner : NetworkBehaviour {
     private Transform[] ArraySpawnPoints;
     [SerializeField]
     private float spawnInterval = 3;
+    [SerializeField]
+    private float magnitude = 3f;
 
 
 	// Use this for initialization
@@ -32,7 +34,12 @@ public class BulletSpawner : NetworkBehaviour {
     {
         int randomNumber = Random.Range(0, 4);
 
-        GameObject ball = Instantiate(Ball, ArraySpawnPoints[randomNumber].position, Quaternion.identity);
+        GameObject ball = Instantiate(Ball, ArraySpawnPoints[randomNumber].position, ArraySpawnPoints[randomNumber].rotation);
+        Rigidbody force = ball.GetComponent<Rigidbody>();
+
+        force.AddForce(ArraySpawnPoints[randomNumber].forward * magnitude);
+
+        
         NetworkServer.Spawn(ball);
 
         yield return new WaitForSeconds(p_interval);

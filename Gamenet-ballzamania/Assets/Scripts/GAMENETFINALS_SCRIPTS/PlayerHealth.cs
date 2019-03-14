@@ -35,7 +35,6 @@ public class PlayerHealth : NetworkBehaviour {
         if (CurrentHealth <= 0)
         {
             CurrentHealth = 0;
-            Debug.Log("dedz");
         }
 
     }
@@ -43,6 +42,5 @@ public class PlayerHealth : NetworkBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         TakeDamage(1);
-        Debug.Log("HITBOXED");
     }
 }

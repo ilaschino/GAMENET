@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a830700d3a92a4785bc017e053c197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinSpeed: 6
-  ImpactForce: 10
+  MinSpeed: 8
+  ImpactForce: 25
 --- !u!114 &114507849696374538
 MonoBehaviour:
   m_ObjectHideFlags: 1

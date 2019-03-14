@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2670bbdf249534bac1341784de328f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagCollide: Wall
   slowPowerup: {fileID: 11400000, guid: b6cfb542ac8a5144786667280a77da3b, type: 2}
 --- !u!135 &135920698422692356
 SphereCollider:

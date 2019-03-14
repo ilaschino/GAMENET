@@ -27,9 +27,9 @@ GameObject:
   - component: {fileID: 114910203571307520}
   - component: {fileID: 114545129474514686}
   - component: {fileID: 54020702295516150}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BallzPlayer
-  m_TagString: Player
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

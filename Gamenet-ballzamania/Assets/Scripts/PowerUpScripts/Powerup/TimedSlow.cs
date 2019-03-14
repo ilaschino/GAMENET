@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimedSlow : TimedPowerup {
 
+    [SerializeField] private string tagCollide = "Wall";
     public Slow slowPowerup;
 
     private PlayerMovement playerMovement;
@@ -29,7 +30,7 @@ public class TimedSlow : TimedPowerup {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == tagCollide)
         {
             other.gameObject.GetComponent<PowerupReceiver>().AddPowerup(slowPowerup.InitializePowerup(other.gameObject));
             Destroy(gameObject);
