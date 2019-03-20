@@ -7,8 +7,10 @@ public class PlayerMovement : NetworkBehaviour {
 
     [SerializeField]
     public float speed = 6.0f;
+    public float increaseSpdOnTimeSlow;
 
     private Vector3 moveDirection = Vector3.zero;
+
  
     private void LateUpdate()
     {
@@ -17,7 +19,7 @@ public class PlayerMovement : NetworkBehaviour {
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection = moveDirection * speed;
 
-        transform.Translate(moveDirection * Time.deltaTime);
+        transform.Translate(moveDirection * (Time.deltaTime * increaseSpdOnTimeSlow));
     }
     public override void OnStartLocalPlayer()
     {

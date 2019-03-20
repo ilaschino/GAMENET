@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  increaseSpdOnTimeSlow: 1
 --- !u!114 &114545129474514686
 MonoBehaviour:
   m_ObjectHideFlags: 1

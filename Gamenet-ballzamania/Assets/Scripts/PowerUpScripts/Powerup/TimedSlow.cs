@@ -18,13 +18,15 @@ public class TimedSlow : TimedPowerup {
     public override void Activate()
     {
         Slow slowPowerup = (Slow)powerup;
-        playerMovement.speed -= slowPowerup.slowValue;
+        playerMovement.increaseSpdOnTimeSlow += slowPowerup.slowValue;
+        Time.timeScale = 0.5f;
         Debug.Log(slowPowerup.slowValue);
     }
 
     public override void End()
     {
-        playerMovement.speed += slowPowerup.slowValue;
+        playerMovement.increaseSpdOnTimeSlow -= slowPowerup.slowValue;
+        Time.timeScale = 1.0f;
         Debug.Log(slowPowerup.slowValue);
     }
 

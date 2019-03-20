@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2fb618e7b2c4124eb77410582dad2c2, type: 3}
   m_Name: New Slow
   m_EditorClassIdentifier: 
-  duration: 2
-  slowValue: 10
+  duration: 5
+  slowValue: 1
