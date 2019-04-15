@@ -32,8 +32,18 @@ public class BallMovement : MonoBehaviour {
         {
             Vector3 dir = collision.contacts[0].point - transform.position;
             dir = -dir.normalized;
+            rb.velocity = Vector3.zero;
 
             rb.AddForce(dir * ImpactForce, ForceMode.Impulse);
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Vector3 dir = collision.contacts[0].point - transform.position;
+            dir = -dir.normalized;
+
+            rb.velocity = Vector3.zero;
+            rb.AddForce(dir * ImpactForce * 3, ForceMode.Impulse);
         }
     }
 }

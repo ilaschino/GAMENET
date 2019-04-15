@@ -9,13 +9,26 @@ public class PlayerMovement : NetworkBehaviour {
     public float speed = 6.0f;
     public float increaseSpdOnTimeSlow;
 
-    private Vector3 moveDirection = Vector3.zero;
+    [SerializeField]
+    public float distanceDisableInput = 5f;
 
- 
+    private Vector3 moveDirection = Vector3.zero;
+    private Vector3 initialPos = Vector3.zero;
+
+    private float DistanceInitial { get { return Vector3.Distance(transform.position, initialPos); } }
+    private float DifferenceInitial { get { return transform.position.x - initialPos.x; } }
+
     private void LateUpdate()
     {
         if (!isLocalPlayer) return;
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
+
+        moveDirection = new Vector3(Input.GetAxis("Horizontal") * transform.right.x, 0.0f, 0.0f);
+
+        if (DifferenceInitial < 0 && DistanceInitial > distanceDisableInput && moveDirection.x < 0)
+            return;
+        else if (DifferenceInitial > 0 && DistanceInitial > distanceDisableInput && moveDirection.x > 0)
+            return;
+
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection = moveDirection * speed;
 
@@ -25,5 +38,11 @@ public class PlayerMovement : NetworkBehaviour {
     {
         base.OnStartLocalPlayer();
         GetComponent<MeshRenderer>().material.color = Color.blue;
+        Vector3 target = SimpleSceneData.singleton.centerStage.transform.position;
+        target.y = transform.position.y;
+        SimpleSceneData.singleton.centerStage.transform.position = target;
+        transform.LookAt(SimpleSceneData.singleton.centerStage.transform, Vector3.up);
+        initialPos = transform.position;
+        gameObject.name = "Local";
     }
 }
