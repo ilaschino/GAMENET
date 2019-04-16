@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 54020702295516150}
   - component: {fileID: 114656798010552728}
   - component: {fileID: 114495017316049780}
+  - component: {fileID: 114590795095405916}
   m_Layer: 11
   m_Name: BallzPlayer
   m_TagString: Player
@@ -198,6 +199,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPowerups: []
+--- !u!114 &114590795095405916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382083769480690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec7704e849b4477fb643f78f9163041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  push: 32
+  radius: 5
+  ballMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &114637106602888120
 MonoBehaviour:
   m_ObjectHideFlags: 1

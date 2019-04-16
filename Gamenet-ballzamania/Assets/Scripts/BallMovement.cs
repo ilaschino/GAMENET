@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class BallMovement : MonoBehaviour {
+public class BallMovement : NetworkBehaviour {
 
     [SerializeField] private float MinSpeed = 2;
     [SerializeField] private float ImpactForce = 10f;
@@ -24,6 +25,19 @@ public class BallMovement : MonoBehaviour {
             speed.y = rb.velocity.y;
             rb.velocity = speed;
         }
+    }
+
+    [ClientRpc]
+    public void RpcPush(Vector3 originForward)
+    {
+        Vector3 vel = originForward;
+        
+
+        vel *=  ImpactForce * 10;
+
+        rb.velocity = Vector3.zero;
+
+        rb.AddForce(vel, ForceMode.Impulse);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class BulletSpawner : NetworkBehaviour {
 
     public GameObject Ball;
-    public Transform SpawnPoint;
+    //public Transform SpawnPoint;
 
     [SerializeField]
     private Transform[] ArraySpawnPoints;

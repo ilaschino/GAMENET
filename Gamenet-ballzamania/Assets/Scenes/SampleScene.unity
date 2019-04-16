@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90f306732a214fe3a319e1cc5927532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 10, z: 10}
+  offset: {x: 0, y: 10, z: 15}
   localPlayer: {fileID: 0}
 --- !u!114 &534669907
 MonoBehaviour:
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2564e96971ea34f936523b583249ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 1264273853472620, guid: 1a3252b2e83638b4daa6c3b65abc6d32, type: 2}
+  ballPrefab: {fileID: 0}
 --- !u!114 &1375737371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1395,13 +1395,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 1264273853472620, guid: 1a3252b2e83638b4daa6c3b65abc6d32, type: 2}
-  SpawnPoint: {fileID: 0}
   ArraySpawnPoints:
-  - {fileID: 1782892132}
   - {fileID: 1179595731}
   - {fileID: 1298441847}
   - {fileID: 33785368}
-  spawnInterval: 1.5
+  - {fileID: 1782892132}
+  spawnInterval: 3
   magnitude: 3
 --- !u!1 &1500703284
 GameObject:
